@@ -19,6 +19,8 @@ spec:
       - image: sdeleuze/spring-boot-crac-demo:checkpoint
         imagePullPolicy: IfNotPresent
         name: app
+        securityContext:
+          privileged: true
         ports:
         - containerPort: 8080
         # livenessProbe:
